@@ -1,2 +1,8 @@
-# Law-School-Match
-I am building a web application called Law School Match.  The purpose of the application is to help prospective law students identify the best law schools based on:  - GPA - LSAT score - Geographic preferences - Career goals - Cost sensitivity - Lifestyle preferences  
+# Law School Match
+
+Scaffold for a law school recommendation platform using:
+- **Frontend:** Next.js + TypeScript + Tailwind CSS
+- **Backend:** FastAPI (Python)
+- **Database:** PostgreSQL
+
+See `/docs/INITIAL_PROJECT_ARCHITECTURE.md` for the full architecture, file-by-file explanations, schema, API plan, Docker setup, and local development instructions.
