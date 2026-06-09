@@ -63,13 +63,21 @@ backend/
 
 Database schema is defined in `/database/schema.sql` with:
 
-- `career_goals`
-- `schools`
-- `school_career_focus` (join table)
-- `student_profiles`
-- `match_results`
+- `career_paths` as a reusable lookup table for interest areas like BigLaw, Government, Public Interest, Judicial Clerkships, Prosecutor careers, Litigation, and Judicial careers
+- `law_school_career_paths` as the join table that scores how strongly each school supports each path
+- `user_profile_career_paths` as the join table for user interest selection and weighting
+- `law_schools`
+- `school_statistics`
+- `employment_outcomes`
+- `bar_passage_rates`
+- `tuition_costs`
+- `user_profiles`
+- `school_matches`
+- `aba_509_import_runs`
 
-This models GPA/LSAT, geography, goals, cost sensitivity, lifestyle preferences, and generated recommendation matches.
+This models GPA/LSAT, geography, extensible career interests, cost sensitivity, lifestyle preferences, and generated recommendation matches.
+
+The backend also includes an ABA 509 ingestion pipeline in `backend/app/ingestion/aba509.py` that normalizes school names and upserts yearly data into PostgreSQL.
 
 ## 4) API endpoints
 

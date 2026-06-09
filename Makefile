@@ -1,4 +1,4 @@
-.PHONY: setup-frontend setup-backend up down
+.PHONY: setup-frontend setup-backend up down import-aba509
 
 setup-frontend:
 cd frontend && npm install
@@ -11,3 +11,6 @@ docker compose up --build
 
 down:
 docker compose down -v
+
+import-aba509:
+cd backend && python -m app.ingestion.aba509 $(INPUT)

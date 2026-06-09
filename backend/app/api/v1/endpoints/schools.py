@@ -1,12 +1,13 @@
 from fastapi import APIRouter, HTTPException
 
+from app.data.mock_schools import MOCK_SCHOOLS
 from app.schemas.school import SchoolSummary
 
 router = APIRouter()
 
-# Placeholder in-memory dataset for architecture scaffolding only.
 SCHOOLS = [
-    SchoolSummary(id=1, name="Example Law School", city="New York", state="NY", ranking=42)
+    SchoolSummary(id=school.school_id, name=school.name, city=school.city, state=school.state, ranking=index + 1)
+    for index, school in enumerate(MOCK_SCHOOLS)
 ]
 
 

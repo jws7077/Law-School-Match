@@ -7,5 +7,5 @@ class StudentProfileCreate(BaseModel):
     lsat_score: int = Field(ge=120, le=180)
     geographic_preferences: list[str] = Field(default_factory=list)
     career_goals: list[str] = Field(default_factory=list)
-    cost_sensitivity: int = Field(ge=1, le=5)
+    cost_sensitivity: int = Field(ge=1, le=10)
     lifestyle_preferences: list[str] = Field(default_factory=list)

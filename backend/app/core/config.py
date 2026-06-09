@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    database_url: str = "******localhost:5432/law_school_match"
+    database_url: str = "postgresql+psycopg://lawschool:lawschool@db:5432/law_school_match"
     backend_host: str = "0.0.0.0"
     backend_port: int = 8000
     frontend_origin: str = "http://localhost:3000"
